@@ -4,7 +4,7 @@ import { product } from './initialState';
 export default function productReducer(state = product, { type, payload }) {
   switch (type) {
     case types.GET_PRODUCT_SUCCESS:
-      return { ...state, ...payload };
+      return { ...payload };
     default:
       return state;
   }

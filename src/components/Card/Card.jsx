@@ -16,11 +16,11 @@ const Card = ({ product }) => (
           sizes="50vw"
         />
        <source media="(min-width: 700px)"
-         srcSet={`${pathToImages}/${product.id}800.webp 800w`}
+         srcSet={`${pathToImages}/${product.id}-medium.webp 800w`}
          sizes="30vw"
         />
        <img
-         srcSet={`${pathToImages}/${product.id}400.webp 400w`}
+         srcSet={`${pathToImages}/${product.id}-small.webp 400w`}
          sizes="80vw"
        />
       </picture>

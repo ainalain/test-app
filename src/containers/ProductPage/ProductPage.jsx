@@ -34,6 +34,10 @@ export class ProductPage extends Component {
       product,
     } = this.props;
 
+    if (isLoading) {
+      return (<div>Loading...</div>);
+    }
+
     return !isLoading && (<div className={styles.home}>
       <Card product={product} />
       <CommentsList />
@@ -41,7 +45,7 @@ export class ProductPage extends Component {
   }
 }
 ProductPage.defaultProps = {
-  isLoading: true,
+  isLoading: 0,
   productId: 'classic-gelato',
 };
 
@@ -52,7 +56,7 @@ ProductPage.propTypes = {
 };
 
 const mapStateToProps = ({ product, isLoading }) => ({
-  isLoading,
+  isLoading: isLoading.product,
   product,
 });
 
