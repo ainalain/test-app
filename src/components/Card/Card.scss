@@ -1,0 +1,30 @@
+@import "../App/layout.scss";
+
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.photo {
+  width: 50%;
+}
+
+.title {
+  display: flex;
+
+  padding-top: 10px;
+
+  transition: all 0.3s ease;
+
+  color: #000;
+
+  flex-wrap: wrap;
+
+}
+
+.title:hover {
+  color: HSL(185, 92%, 37%);
+}

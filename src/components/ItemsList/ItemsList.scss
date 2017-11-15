@@ -1,0 +1,53 @@
+@import "../App/layout.scss";
+
+.section {
+  padding-top: 15px;
+}
+
+.heading {
+  text-align: left;
+  text-transform: capitalize;
+
+  font-family: 'Crimson Text', serif;
+  font-size: 2.6rem;
+}
+
+.items {
+  padding-top: 10px;
+  text-align: justify;
+  line-height: 1.4rem;
+}
+
+.items.steps {
+  list-style-position: inside;
+  .item {
+      list-style-type: decimal;
+  }
+}
+
+.item {
+  padding: 7px 0;
+
+  font-size: 1.2rem;
+}
+
+@include tablet-portrait-up() {
+  .section {
+    flex: 0.5;
+    padding-top: 0;
+  }
+
+  .heading {
+    padding-left: 20px;
+
+    font-size: 3rem;
+  }
+
+  .items {
+    padding: 10px 0 0 10px;
+  }
+
+  .items.ingredients {
+    padding-left: 20px;
+  }
+}
