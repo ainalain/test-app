@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Initially, the internet wasn’t built to support such dynamic and complex web apps. It was conceived to be a collection of HTML pages, linking to one another to form the concept of “web” that contains information. Everything was largely built around the so-called request/response paradigm of HTTP. A client loads up a page and then nothing happens until the user clicks and navigates to the next page.",
+    "date": "last month, 5 p.m.",
+    "rate": "3"
+  },
+  {
+    "text": "Initially, the internet wasn’t built to support such dynamic and complex web apps. It was conceived to be a collection of HTML pages, linking to one another to form the concept of “web” that contains information. Everything was largely built around the so-called request/response paradigm of HTTP. A client loads up a page and then nothing happens until the user clicks and navigates to the next page.",
+    "date": "last month, 2 a.m.",
+    "rate": "5"
+  },
+  {
+    "text": "Initially, the internet wasn’t built to support such dynamic and complex web apps. It was conceived to be a collection of HTML pages, linking to one another to form the concept of “web” that contains information. Everything was largely built around the so-called request/response paradigm of HTTP. A client loads up a page and then nothing happens until the user clicks and navigates to the next page.",
+    "date": "3 days ago, 10 p.m.",
+    "rate": "5"
+  },
+  {
+    "text": "Initially, the internet wasn’t built to support such dynamic and complex web apps. It was conceived to be a collection of HTML pages, linking to one another to form the concept of “web” that contains information. Everything was largely built around the so-called request/response paradigm of HTTP. A client loads up a page and then nothing happens until the user clicks and navigates to the next page.",
+    "date": "yesterday, 3 p.m.",
+    "rate": "4"
+  }
+]

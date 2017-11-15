@@ -6,8 +6,8 @@ const ItemsList = ({ items, title }) => (
   <div className={styles.section}>
     <h2 className={`${styles.heading} ${styles[title]}`}>{title}</h2>
     <ul className={`${styles.items} ${styles[title]}`}>
-      {items.map(item => (
-        <li key={item} className={styles.item}>{item}</li>
+      {items.map((item, index) => (
+        <li key={index} className={styles.item}>{item.text}</li>
       ))}
     </ul>
   </div>
