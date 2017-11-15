@@ -82,10 +82,11 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['es2015', 'stage-1', 'react'],
+          presets: ['es2015', 'stage-0', 'react'],
           plugins: [
             'babel-plugin-transform-class-properties',
-            'babel-plugin-syntax-class-properties'
+            'babel-plugin-syntax-class-properties',
+            'babel-plugin-transform-object-rest-spread',
           ],
         },
       },
