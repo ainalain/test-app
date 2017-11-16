@@ -15,7 +15,7 @@ describe('ItemsList', () => {
   });
   it('renders an h2 with provided text', () => {
     expect(component.find('h2').length).toBe(1);
-    expect(component.find('h2').text()).toBe('test-list');
+    expect(component.find('h2').text()).toBe('4 test-list');
   });
 
   it('renders an ul element', () => {

@@ -5,7 +5,7 @@ import Card from './Card';
 import styles from './Card.scss';
 
 const props = {
-  recipe: {
+  product: {
     id: 'classic-gelato',
     name: 'The best gelato in Moscow',
   },
