@@ -60,19 +60,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   enforce: "pre",
-      //   test: /\.jsx|js/,
-      //   exclude: /node_modules/,
-      //   loader: "eslint-loader",
-      //   options: {
-      //     configFile: '.eslintrc.json',
-      //     emitError: false,
-      //     emitWarning: true,
-      //     failOnWarning: false,
-      //     failOnError: false,
-      //   },
-      // },
       {
         test: /\.json$/,
         loader: "json-loader",
@@ -104,7 +91,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg)$/i,
+        test: /\.(png|jpg|gif)$/i,
         loader: 'url-loader',
         options: {
           name: 'assets/images/[name].[ext]',

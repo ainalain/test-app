@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as productActions from '../../actions/productActions/productActions';
 import CommentsList from '../CommentsList';
+import Loading from '../../components/Loading';
 import Card from '../../components/Card';
 import styles from './ProductPage.scss';
 
@@ -33,11 +34,8 @@ export class ProductPage extends Component {
       product,
     } = this.props;
 
-    if (isLoading) {
-      return (<div>Loading...</div>);
-    }
-
-    return !isLoading && (<div className={styles.page}>
+    return (<div className={styles.page}>
+      <Loading ajaxCallInProgress={isLoading} />
       <Card product={product} />
       <CommentsList />
     </div>);

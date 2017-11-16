@@ -1,0 +1,16 @@
+@import '../App/layout.scss';
+
+.loading {
+  position: absolute;
+  top: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+@include tablet-landscape-up() {
+  .loading {
+    left: 33%;
+  }
+}
