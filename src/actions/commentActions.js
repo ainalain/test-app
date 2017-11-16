@@ -7,6 +7,15 @@ export const loadCommentsSuccess = (comments) => ({
   payload: comments,
 });
 
+export const addCommentSuccess = (result) => ({
+  type: types.ADD_COMMENT_SUCCESS,
+  payload: result,
+});
+
+export const clearDefaultComments = () => ({
+  type: types.CLEAR_DEFAULT_COMMENTS,
+});
+
 const COMMENTS_TARGET = 'comments';
 
 export const getAllComments = () => (
@@ -21,11 +30,23 @@ export const getAllComments = () => (
   }
 );
 
-export const addComment = (comment) => (
+export const addComment = (comment, rating) => (
   (dispatch) => {
-    return commentsApi.addComment().then(comments =>
-      dispatch(addCommentSuccess(comments)
+    return commentsApi.addComment(comment, rating).then(result =>
+      dispatch(addCommentSuccess(result)
     )).catch(error => {
+      dispatch(ajaxCallError(error));
+      throw (error);
+    });
+  }
+);
+
+export const clearComments = () => (
+  (dispatch) => {
+    return commentsApi.clearComments().then(comments => {
+      dispatch(clearDefaultComments());
+      return dispatch(loadCommentsSuccess(comments));
+    }).catch(error => {
       dispatch(ajaxCallError(error));
       throw (error);
     });

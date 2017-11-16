@@ -8,7 +8,7 @@ export default function commentsReducer(state = comments, { type, payload }) {
     case types.LOAD_COMMENTS_FAILURE:
       return payload;
     case types.ADD_COMMENT_SUCCESS:
-      return [ ...state, ...payload ];
+      return [ payload, ...state];
     default:
       return state;
   }

@@ -1,11 +1,7 @@
-@import "../../components/App/layout.scss";
-
-.list {
-  padding-bottom: 100px;
-}
+@import "../App/layout.scss";
 
 .commentWrapper {
-  position: relative;
+  //position: relative;
 
   width: 100%;
   max-width: 600px;
@@ -25,29 +21,15 @@
   resize: none;
 }
 
-.resetButton {
-  @include button();
-
-  background-color: #ffc082;
-  border-color: #ffc082;
-
-  &:hover {
-    background-color: #ffae5e;
-    border-color: #ffae5e;
-  }
-}
-
-.disabled {
-  display: none;
+.rating {
+  padding: 10px 0 10px 20px;
 }
 
 .submitButton {
   @include button();
 
-  position: absolute;
+  margin-left: 20px;
 
-  bottom: 15px;
-  right: 10px;
   background-color: #82c0ff;
   border-color: #82c0ff;
 
@@ -56,4 +38,12 @@
     border-color: #4DA6FF;
 
   }
+}
+
+.error {
+  padding: 10px 0 10px 20px;;
+
+  color: red;
+
+  font-size: 1.2rem;
 }

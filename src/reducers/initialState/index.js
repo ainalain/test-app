@@ -2,10 +2,13 @@ import comments from './comments.json';
 import product from './product.json';
 import isLoading from './loading.json';
 
+const initialReset = false;
+
 const initialState = {
   comments,
   product,
   isLoading,
+  initialReset,
 };
 
 export {
@@ -13,4 +16,5 @@ export {
   comments,
   product,
   isLoading,
+  initialReset,
 };
