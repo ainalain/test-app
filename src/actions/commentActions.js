@@ -20,3 +20,14 @@ export const getAllComments = () => (
     });
   }
 );
+
+export const addComment = (comment) => (
+  (dispatch) => {
+    return commentsApi.addComment().then(comments =>
+      dispatch(addCommentSuccess(comments)
+    )).catch(error => {
+      dispatch(ajaxCallError(error));
+      throw (error);
+    });
+  }
+);
