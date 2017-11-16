@@ -17,11 +17,13 @@ const CommentInput = ({ onCommentChange, onRatingChange,
     value={currentRating}
     onChange={onRatingChange}
     count={5}
-    size={20}
+    size={22}
     color1={'#939393'}
     color2={'#ffd700'}
     half={false}
   />);
+
+  const errorClass = error.length ? '' : `${styles.hidden}`;
 
   return (<div className={styles.commentWrapper}>
    <textarea value={currentComment} rows={7}
@@ -33,10 +35,9 @@ const CommentInput = ({ onCommentChange, onRatingChange,
       {rating}
     </div>
       {submitButton}
-      {error
-        && <div className={styles.error}>
-            {error}
-          </div>}
+      <div className={`${styles.error} ${errorClass}`}>
+          {error}
+      </div>
   </div>);
 };
 

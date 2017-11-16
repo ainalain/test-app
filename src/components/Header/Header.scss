@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   width: 100%;
   min-height: 100px;
+  background-color: #82c0ff;
 
   font-size: 1.2rem;
 
@@ -15,7 +16,6 @@
 .nav {
   width: 100%;
   padding: 0 10px;
-  font-family: 'Crimson Text', serif;
 }
 
 .links {
@@ -49,8 +49,18 @@
 }
 
 .search {
+  background-color: #82c0ff;
+
   width: 30%;
+
+  border-radius: 5px;
   text-align: center;
+}
+
+.input {
+  font-size: 1.2rem;
+
+  border-radius: 5px;
 }
 
 @include tablet-portrait-up() {

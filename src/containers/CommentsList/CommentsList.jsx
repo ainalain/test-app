@@ -9,11 +9,13 @@ import styles from './CommentsList.scss';
 
 const EMPTY_TEXT_ERROR = 'The comment must habe at least 1 character.';
 const MISSING_RATING_ERROR = 'You should rate this product.';
+const EMPTY_COMMENT_ERROR = 'Please provide some text and rate the product.';
 
 export class CommentsList extends React.Component {
   state = {
     currentComment: '',
     currentRating: 0,
+    error: '',
    };
 
   static propTypes = {
@@ -27,10 +29,12 @@ export class CommentsList extends React.Component {
   }
 
   onCommentChange = (e) => {
+    this.setState({ error: '' });
     this.setState({ currentComment: e.target.value });
   }
 
   onRatingChange = (value) => {
+    this.setState({ error: '' });
     this.setState({ currentRating: value });
   }
 
@@ -49,6 +53,9 @@ export class CommentsList extends React.Component {
       return;
     } else if (!currentRating) {
       this.setState({ error: MISSING_RATING_ERROR });
+      return;
+    } else if (!currentComment.length && !currentRating) {
+      this.setState({ error: EMPTY_COMMENT_ERROR });
       return;
     }
 
@@ -99,6 +106,9 @@ export class CommentsList extends React.Component {
     }
     return (
       <div className={styles.list}>
+        <h2 className={styles.commentsHeading}>
+          {comments.length} comments
+        </h2>
         <CommentInput
           currentRating={currentRating}
           onCommentChange={onCommentChange}

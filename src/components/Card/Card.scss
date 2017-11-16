@@ -1,33 +1,114 @@
 @import "../App/layout.scss";
 
 .card {
-  padding: 10px 0;
   display: flex;
+  flex-direction: column;
+
+  padding: 10px 0;
+
   justify-content: space-between;
   align-items: center;
 }
 
 .photo {
-  width: 40%;
-}
-
-.picture {
   width: 100%;
 }
 
 .info {
-  width: 40%;
+  width: 100%;
+
+  font-size: 1.2rem;
+
 }
 
 .title {
-  font-size: 1.6rem;
+  margin-right: auto;
 
+  text-align: center;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+
+  padding: 10px 20px 10px 0;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  margin-left: 20px;
+
+  border-color: #c0f495;
+  background-color: #c0f495;
+
+  @include button();
+
+  &:hover {
+    border-color: #5fb01c;
+    background-color: #5fb01c;
+
+  }
 }
 
 .description {
-  font-size: 1.4rem;
-
-  line-height: 1.4rem;
-
   text-align: justify;
+
+  font-size: 1.3rem;
+  line-height: 1.4rem;
 }
+
+@include phone-only() {
+  .info {
+    font-size: 1.1rem;
+  }
+
+}
+
+@include tablet-landscape-up() {
+  .card {
+    flex-direction: row;
+  }
+
+  .photo, .info {
+    width: 40%;
+  }
+
+  .info {
+    flex-wrap: wrap;
+    padding-left: 5%;
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    padding-left: 20px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+};
+
+@include tablet-landscape-only {
+  .card {
+    justify-content: space-around;
+  }
+};
+
+
+@include desktop-up {
+  .card {
+    justify-content: center;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+};

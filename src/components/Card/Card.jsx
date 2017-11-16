@@ -7,24 +7,17 @@ const pathToImages = '../../assets/images';
 const Card = ({ product }) => (
   <section className={styles.card}>
     <div className={styles.photo}>
-      <picture className={styles.picture}>
-        <source media="(min-width: 900px)" type="image/webp"
-          srcSet={`${pathToImages}/${product.id}.png 1200w`}
-          sizes="30vw"
-        />
-       <source media="(min-width: 700px)" type="image/webp"
-         srcSet={`${pathToImages}/${product.id}-medium.webp 800w`}
-         sizes="40vw"
-        />
        <img
-         srcSet={`${pathToImages}/${product.id}-small.webp 400w`}
-         sizes="80vw"
+         src={`${pathToImages}/${product.id}-small.webp`}
+            alt="You can order this very tasty italian ice cream with delivery."
        />
-      </picture>
     </div>
     <div className={styles.info}>
-      <div className={styles.title}>{product.name}</div>
-      <div className={styles.price}>{product.price}</div>
+      <div className={styles.container}>
+        <div className={styles.title}>{product.name}</div>
+        <div className={styles.price}>{product.price}</div>
+        <button className={styles.button}>Buy now</button>
+      </div>
       <div className={styles.description}>{product.description}</div>
     </div>
   </section>

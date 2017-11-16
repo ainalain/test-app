@@ -17,12 +17,6 @@
   padding: 10px 50px 30px 10px;
 }
 
-.item {
-  padding: 7px 0;
-
-  font-size: 1.2rem;
-}
-
 @include tablet-portrait-up() {
   .section {
     flex: 0.5;

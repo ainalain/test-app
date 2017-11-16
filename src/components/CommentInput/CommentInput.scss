@@ -1,8 +1,6 @@
 @import "../App/layout.scss";
 
 .commentWrapper {
-  //position: relative;
-
   width: 100%;
   max-width: 600px;
 
@@ -16,9 +14,10 @@
 
   font-size: 1rem;
 
-  margin: 0 20px;
+  margin: 0;
 
   resize: none;
+  outline-color: #4DA6FF;
 }
 
 .rating {
@@ -41,9 +40,20 @@
 }
 
 .error {
+  visibility: visible;
   padding: 10px 0 10px 20px;;
 
   color: red;
 
   font-size: 1.2rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@include tablet-portrait-up() {
+  .textarea {
+    margin: 0 20px;
+  }
 }

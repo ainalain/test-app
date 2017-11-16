@@ -14,7 +14,7 @@ const ListItem = ({ text, date, rating, author }) => (
         edit={false}
         value={rating}
         count={5}
-        size={20}
+        size={22}
         color1={'#939393'}
         color2={'#ffd700'}
       />

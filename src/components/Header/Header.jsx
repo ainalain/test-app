@@ -20,7 +20,7 @@ export const Header = () => (
       </ul>
     </nav>
     <span className={styles.search}>
-      <input type="text" placeholder="Search" />
+      <input className={styles.input} type="text" placeholder="Search" />
     </span>
   </header>
 );

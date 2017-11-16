@@ -5,9 +5,6 @@ import styles from './ItemsList.scss';
 
 const ItemsList = ({ items, title }) => (
   <div className={styles.section}>
-    <h2 className={`${styles.heading} ${styles[title]}`}>
-      {items.length} {title}
-    </h2>
     <ul className={`${styles.items} ${styles[title]}`}>
       {items.map((item, index) => (
         <ListItem {...item} key={index} />
