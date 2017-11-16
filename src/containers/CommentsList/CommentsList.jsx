@@ -19,13 +19,18 @@ export class CommentsList extends React.Component {
    };
 
   static propTypes = {
-    comments: PropTypes.array,
+    getAllComments: PropTypes.func.isRequired,
+    addComment: PropTypes.func.isRequired,
+    clearComments: PropTypes.func.isRequired,
+    comments: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.number,
+    defaultCleared: PropTypes.bool,
   }
 
   static defaultProps = {
     comments: [],
     isLoading: 0,
+    defaultCleared: false,
   }
 
   onCommentChange = (e) => {

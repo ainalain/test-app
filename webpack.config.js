@@ -92,20 +92,23 @@ module.exports = {
         },
       },
       {
+        test: /\.jsx|js/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          configFile: '.eslintrc.json',
+          emitError: false,
+          emitWarning: true,
+          failOnWarning: false,
+          failOnError: false,
+        },
+      },
+      {
         test: /\.(png|jpg)$/i,
         loader: 'url-loader',
         options: {
           name: 'assets/images/[name].[ext]',
           limit: 25000,
-        },
-      },
-      {
-        test: /\.(woff|woff2)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 50000,
-          mimetype: 'application/font-woff',
-          name: 'assets/fonts/[name].[ext]',
         },
       },
       {

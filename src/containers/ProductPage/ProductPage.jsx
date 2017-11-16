@@ -8,17 +8,16 @@ import Card from '../../components/Card';
 import styles from './ProductPage.scss';
 
 export class ProductPage extends Component {
-  //TODO: check static in babel, got error in bunding process
-  // static defaultProps = {
-  //   isLoading: false,
-  //   productId: 'classic-gelato',
-  // }
-  //
-  // static propTypes = {
-  //   isLoading: PropTypes.number,
-  //   productId: PropTypes.string,
-  //   product: PropTypes.object,
-  // }
+  static defaultProps = {
+    isLoading: false,
+    productId: 'classic-gelato',
+  }
+
+  static propTypes = {
+    isLoading: PropTypes.number,
+    productId: PropTypes.string,
+    product: PropTypes.object,
+  }
 
   componentWillMount() {
     const {
@@ -44,16 +43,6 @@ export class ProductPage extends Component {
     </div>);
   }
 }
-ProductPage.defaultProps = {
-  isLoading: 0,
-  productId: 'classic-gelato',
-};
-
-ProductPage.propTypes = {
-  isLoading: PropTypes.number,
-  productId: PropTypes.string,
-  product: PropTypes.object,
-};
 
 const mapStateToProps = ({ product, isLoading }) => ({
   isLoading: isLoading.product,

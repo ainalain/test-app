@@ -13,7 +13,7 @@ const CommentInput = ({ onCommentChange, onRatingChange,
   );
 
   const rating = (<ReactStars
-    edit={true}
+    edit
     value={currentRating}
     onChange={onRatingChange}
     count={5}
