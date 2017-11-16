@@ -1,6 +1,6 @@
-import * as types from './actionTypes';
-import { beginAjaxCall, ajaxCallError } from './asyncActions';
-import productApi from '../api/mockProductApi';
+import * as types from '../actionTypes';
+import { beginAjaxCall, ajaxCallError } from '../asyncActions/asyncActions';
+import productApi from '../../api/mockProductApi';
 
 export const getProductSuccess = (product) => ({
   type: types.GET_PRODUCT_SUCCESS,

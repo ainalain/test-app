@@ -1,6 +1,6 @@
-import * as types from './actionTypes';
-import commentsApi from '../api/mockCommentsApi';
-import { beginAjaxCall, ajaxCallError } from './asyncActions';
+import * as types from '../actionTypes';
+import commentsApi from '../../api/mockCommentsApi';
+import { beginAjaxCall, ajaxCallError } from '../asyncActions/asyncActions';
 
 export const loadCommentsSuccess = (comments) => ({
   type: types.LOAD_COMMENTS_SUCCESS,

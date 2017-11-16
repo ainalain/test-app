@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ItemsList from '../../components/ItemsList';
 import CommentInput from '../../components/CommentInput';
-import * as commentActions from '../../actions/commentActions';
+import * as commentActions from '../../actions/commentActions/commentActions';
 import styles from './CommentsList.scss';
 
 const EMPTY_TEXT_ERROR = 'The comment must habe at least 1 character.';

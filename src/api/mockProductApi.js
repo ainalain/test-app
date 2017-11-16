@@ -1,6 +1,6 @@
 const delay = 1000;
 
-const product = {
+export const product = {
   name: 'The best gelato in Moscow',
   id: 'classic-gelato',
   price: '$7.5',

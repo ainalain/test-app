@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as productActions from '../../actions/productActions';
+import * as productActions from '../../actions/productActions/productActions';
 import CommentsList from '../CommentsList';
 import Card from '../../components/Card';
 import styles from './ProductPage.scss';
