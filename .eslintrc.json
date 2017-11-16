@@ -3,7 +3,8 @@
     "eslint:recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "class-property"
   ],
   "parserOptions": {
     "ecmaVersion": 7,
