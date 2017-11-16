@@ -1,5 +1,5 @@
-import * as types from '../actions/actionTypes';
-import { initialReset} from './initialState';
+import * as types from '../../actions/actionTypes';
+import { initialReset} from '../initialState';
 
 export default function resetCommentsReducer(state = initialReset, { type }) {
   switch (type) {

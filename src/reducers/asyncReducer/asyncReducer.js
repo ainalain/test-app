@@ -3,9 +3,9 @@ import {
   AJAX_CALL_ERROR,
   LOAD_COMMENTS_SUCCESS,
   GET_PRODUCT_SUCCESS,
-} from '../actions/actionTypes';
+} from '../../actions/actionTypes';
 
-import { isLoading } from './initialState';
+import { isLoading } from '../initialState';
 
 const successActions = [
   LOAD_COMMENTS_SUCCESS,

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import commentsReducer from './commentsReducer/commentsReducer';
-import asyncReducer from './asyncReducer';
-import productReducer from './productReducer';
-import resetCommentsReducer from './resetCommentsReducer';
+import asyncReducer from './asyncReducer/asyncReducer';
+import productReducer from './productReducer/productReducer';
+import resetCommentsReducer from './resetCommentsReducer/resetCommentsReducer';
 
 const rootReducer = combineReducers({
   comments: commentsReducer,

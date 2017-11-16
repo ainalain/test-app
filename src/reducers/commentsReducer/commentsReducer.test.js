@@ -2,10 +2,10 @@ import expect from 'expect';
 import reducer from './commentsReducer';
 import * as types from '../../actions/actionTypes';
 
-
 describe('Comments reducer', () => {
   const initialState = [];
   it('should return initial state', () => {
+    //TODO: this test is failing, don't know why
     expect(reducer(undefined, {})).toEqual(initialState);
   });
 
