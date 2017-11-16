@@ -72,6 +72,7 @@ export class CommentsList extends React.Component {
   }
 
   onResetButtonClick = (e) => {
+    this.setState({ error: '' });
     this.props.clearComments();
   }
 

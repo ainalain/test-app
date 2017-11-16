@@ -20,7 +20,8 @@
 }
 
 .date {
-  text-align: right;
+  display: block;
+  padding: 10px 0;
 
   font-size: 1rem;
 }
@@ -38,4 +39,11 @@
   .item, .text {
     font-size: 1.2rem;
   }
-};
+}
+
+  @include tablet-portrait-up() {
+    .date {
+      display: inline-block;
+      margin-left: 50px;
+    }
+  }
