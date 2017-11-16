@@ -11,6 +11,7 @@ const ListItem = ({ text, date, rating, author }) => (
     </div>
     <div className={styles.rating}>
       <ReactStars
+        edit={false}
         value={rating}
         count={5}
         size={20}

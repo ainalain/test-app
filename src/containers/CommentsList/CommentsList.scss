@@ -26,10 +26,19 @@
 }
 
 button {
+  @include button();
+
   position: absolute;
 
   bottom: 15px;
   right: 10px;
 
-  @include button();
+  background-color: #82c0ff;
+  border-color: #82c0ff;
+
+  &:hover {
+    background-color: #4DA6FF;
+    border-color: #4DA6FF;
+
+  }
 }
