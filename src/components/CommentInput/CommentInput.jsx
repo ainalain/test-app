@@ -42,10 +42,12 @@ const CommentInput = ({ onCommentChange, onRatingChange,
 };
 
 CommentInput.propTypes = {
-  onCommentChange: PropTypes.func,
-  onRatingChange: PropTypes.func,
-  onSubmit: PropTypes.func,
+  onCommentChange: PropTypes.func.isRequired,
+  onRatingChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   error: PropTypes.string,
+  currentRating: PropTypes.number,
+  currentComment: PropTypes.string,
 };
 
 export default CommentInput;

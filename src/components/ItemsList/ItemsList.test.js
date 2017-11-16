@@ -13,13 +13,14 @@ describe('ItemsList', () => {
   beforeEach(() => {
     component = shallow(<ItemsList {...props} />);
   });
-  it('renders an h2 with provided text', () => {
-    expect(component.find('h2').length).toBe(1);
-    expect(component.find('h2').text()).toBe('4 test-list');
-  });
 
   it('renders an ul element', () => {
     expect(component.find('ul').length).toBe(1);
+    expect(component.find('ul').children().length).toBe(4);
+  });
+
+  it('renders several list items', () => {
+    expect(component.find('ListItem').length).toBe(4);
     expect(component.find('ul').children().length).toBe(4);
   });
 });

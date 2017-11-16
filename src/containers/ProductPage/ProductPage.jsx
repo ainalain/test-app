@@ -9,7 +9,7 @@ import styles from './ProductPage.scss';
 
 export class ProductPage extends Component {
   static defaultProps = {
-    isLoading: false,
+    isLoading: 0,
     productId: 'classic-gelato',
   }
 

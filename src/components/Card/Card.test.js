@@ -22,6 +22,10 @@ describe('Card', () => {
   });
 
   it('renders an img tag', () => {
-    expect(component.find('picture').length).toBe(1);
+    expect(component.find('img').length).toBe(1);
+  });
+
+  it('renders a button', () => {
+    expect(component.find('button').length).toBe(1);
   });
 });

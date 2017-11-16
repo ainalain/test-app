@@ -22,9 +22,4 @@ describe('App', () => {
     const component = shallow(<App />);
     expect(component.find('Header').length).toBe(1);
   });
-
-  it('renders ProductPage component', () => {
-    const component = shallow(<App />);
-    expect(component.find('ProductPage').length).toBe(1);
-  });
 });
