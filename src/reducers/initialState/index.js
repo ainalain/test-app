@@ -1,6 +1,6 @@
-import comments from './comments.json';
-import product from './product.json';
-import isLoading from './loading.json';
+import comments from './comments';
+import product from './product';
+import isLoading from './loading';
 
 const initialReset = false;
 

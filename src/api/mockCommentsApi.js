@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import comments from './comments.json';
+import comments from './comments';
 
 const delay = 1000;
 
