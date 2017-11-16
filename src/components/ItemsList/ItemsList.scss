@@ -13,9 +13,9 @@
 }
 
 .items {
-  padding-top: 10px;
-  text-align: justify;
-  line-height: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px 30px 10px;
 }
 
 .items.steps {

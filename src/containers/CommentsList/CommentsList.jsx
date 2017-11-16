@@ -26,7 +26,7 @@ export class CommentsList extends React.Component {
       comments,
       isLoading,
     } = this.props;
-
+    console.log('comments: ', comments);
     if (isLoading) {
       return (<div>Loading...</div>);
     }

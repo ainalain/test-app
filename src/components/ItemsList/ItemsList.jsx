@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ListItem from '../ListItem';
 import styles from './ItemsList.scss';
 
 const ItemsList = ({ items, title }) => (
   <div className={styles.section}>
-    <h2 className={`${styles.heading} ${styles[title]}`}>{title}</h2>
+    <h2 className={`${styles.heading} ${styles[title]}`}>
+      {items.length} {title}
+    </h2>
     <ul className={`${styles.items} ${styles[title]}`}>
       {items.map((item, index) => (
-        <li key={index} className={styles.item}>{item.text}</li>
+        <ListItem {...item} key={index} />
       ))}
     </ul>
   </div>

@@ -38,7 +38,7 @@ export class ProductPage extends Component {
       return (<div>Loading...</div>);
     }
 
-    return !isLoading && (<div className={styles.home}>
+    return !isLoading && (<div className={styles.page}>
       <Card product={product} />
       <CommentsList />
     </div>);
