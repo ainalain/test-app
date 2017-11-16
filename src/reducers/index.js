@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import commentsReducer from './commentsReducer';
+import commentsReducer from './commentsReducer/commentsReducer';
 import asyncReducer from './asyncReducer';
 import productReducer from './productReducer';
 import resetCommentsReducer from './resetCommentsReducer';
