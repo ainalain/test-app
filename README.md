@@ -18,9 +18,10 @@ Mocha, Enzyme, Sinon.js, Expect
 ## Development server
 
 Run `npm install` and `npm start` for a dev server.
+With yarn run `yarn install` and `yarn start`.
 Navigate to http://localhost:8080/
 The app will automatically reload if you change any of the source files.
 
 ## Testing
 
-Run `npm test` to execute the unit tests.
+Run `npm test` or `yarn test` to execute the unit tests.

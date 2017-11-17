@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.scss';
 
-const pathToImages = '../../assets/images';
+const pathToImages = './assets/images';
 
 const Card = ({ product }) => (
   <section className={styles.card}>
