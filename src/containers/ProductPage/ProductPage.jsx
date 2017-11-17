@@ -35,7 +35,7 @@ export class ProductPage extends Component {
     } = this.props;
 
     return (<div className={styles.page}>
-      <Loading ajaxCallInProgress={isLoading} />
+      <Loading ajaxCallInProgress={isLoading} large />
       <Card product={product} />
       <CommentsList />
     </div>);

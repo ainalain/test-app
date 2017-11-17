@@ -107,9 +107,9 @@ export class CommentsList extends React.Component {
       </button>
     );
 
-    if (isLoading) {
-      return (<div>Loading...</div>);
-    }
+    // if (isLoading) {
+    //   return (<div>Loading...</div>);
+    // }
     return (
       <div className={styles.list}>
         <h2 className={styles.commentsHeading}>
@@ -122,6 +122,7 @@ export class CommentsList extends React.Component {
           onClick={onSubmitButtonClick}
           currentComment={currentComment}
           error={error}
+          isLoading={isLoading}
         />
         {resetButton}
         <ItemsList items={comments} />

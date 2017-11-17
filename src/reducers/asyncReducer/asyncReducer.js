@@ -3,6 +3,7 @@ import {
   AJAX_CALL_ERROR,
   LOAD_COMMENTS_SUCCESS,
   GET_PRODUCT_SUCCESS,
+  ADD_COMMENT_SUCCESS,
 } from '../../actions/actionTypes';
 
 import { isLoading } from '../initialState';
@@ -10,6 +11,7 @@ import { isLoading } from '../initialState';
 const successActions = [
   LOAD_COMMENTS_SUCCESS,
   GET_PRODUCT_SUCCESS,
+  ADD_COMMENT_SUCCESS,
 ];
 
 export default function asyncReducer(state = isLoading, { type, payload }) {
@@ -20,6 +22,7 @@ export default function asyncReducer(state = isLoading, { type, payload }) {
       }
       return { ...state, product: 1 };
     case LOAD_COMMENTS_SUCCESS:
+    case ADD_COMMENT_SUCCESS:
       return { ...state, comments: 0 };
     case GET_PRODUCT_SUCCESS:
       return { ...state, product: 0 };

@@ -32,6 +32,7 @@ export const getAllComments = () => (
 
 export const addComment = (comment, rating) => (
   (dispatch) => {
+    dispatch(beginAjaxCall(COMMENTS_TARGET));
     return commentsApi.addComment(comment, rating).then(result =>
       dispatch(addCommentSuccess(result)
     )).catch(error => {

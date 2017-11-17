@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactStars from 'react-stars';
+import Loading from '../Loading';
 import styles from './CommentInput.scss';
 
 const CommentInput = ({ onCommentChange, onRatingChange,
-  currentComment, currentRating, onClick, error }) => {
+  currentComment, currentRating, onClick, error, isLoading }) => {
   const submitButton = (<button
       className={styles.submitButton}
       type="submit" onClick={onClick}>
@@ -38,6 +39,7 @@ const CommentInput = ({ onCommentChange, onRatingChange,
       <div className={`${styles.error} ${errorClass}`}>
           {error}
       </div>
+      <Loading ajaxCallInProgress={isLoading} />
   </div>);
 };
 
