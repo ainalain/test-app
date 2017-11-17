@@ -94,7 +94,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(jpg|gif)$/i,
         loader: imgLoader,
         options: {
           name: 'assets/images/[name].[ext]',
@@ -135,7 +135,11 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.join(srcPath, 'assets', 'images', 'classic-gelato-small.webp'),
-        to: path.join(publicPath, 'assets/images/classic-gelato-small.webp'),
+        to: './assets/images/classic-gelato-small.webp',
+      },
+      {
+        from: path.join(srcPath, 'assets', 'images', 'classic-gelato-xs.png'),
+        to: './assets/images/classic-gelato-xs.png',
       },
     ]),
     new FaviconsWebpackPlugin({

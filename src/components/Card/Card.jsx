@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'react-image-webp';
 import styles from './Card.scss';
 
 const pathToImages = './assets/images';
+const fallBackPath = './assets/images';
 
 const Card = ({ product }) => (
   <section className={styles.card}>
     <div className={styles.photo}>
-       <img className={styles.img}
-         src={`${pathToImages}/${product.id}-small.webp`}
+       <Image className={styles.img}
+         webp={`${pathToImages}/${product.id}-small.webp`}
+         src={`${fallBackPath}/${product.id}-xs.png`}
             alt="You can order this very tasty italian ice cream with delivery."
        />
     </div>
