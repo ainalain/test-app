@@ -1,26 +1,3 @@
-This is a test app.
-This project shows how to use React/Redux system to build user interface.
+A demo for my homework project based on react-redux stack.
 
-## Technologies used
-
-**Javascript**: ES2015, ES7
-
-**React app:** React, Redux
-
-**Code bundling:** Webpack 3
-
-**Styles:** Css Modules, (SCSS)Sass
-
-## Unit tests libraries
-
-Mocha, Enzyme, Sinon.js, Expect
-
-## Development server
-
-Run `npm install` and `npm start` for a dev server.
-Navigate to http://localhost:8080/
-The app will automatically reload if you change any of the source files.
-
-## Testing
-
-Run `npm test` to execute the unit tests.
+Please note, that there was not much time for development, so there are some bugs.
