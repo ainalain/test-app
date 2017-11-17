@@ -1,6 +1,12 @@
 This is a test app.
 This project shows how to use React/Redux system to build user interface.
 
+
+## Demo
+https://ainalain.github.io/test-app
+
+*Please note that the project was written in 2 days, so there is room for improvement.*
+
 ## Technologies used
 
 **Javascript**: ES2015, ES7
