@@ -7,7 +7,7 @@ const pathToImages = '../../assets/images';
 const Card = ({ product }) => (
   <section className={styles.card}>
     <div className={styles.photo}>
-       <img
+       <img className={styles.img}
          src={`${pathToImages}/${product.id}-small.webp`}
             alt="You can order this very tasty italian ice cream with delivery."
        />

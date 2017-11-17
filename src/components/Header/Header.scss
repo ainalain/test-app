@@ -37,6 +37,12 @@
 
   display: flex;
   align-items: center;
+
+  padding-top: 20px;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
 
 .logo {
@@ -53,6 +59,8 @@
 
   width: 30%;
 
+  padding-top: 20px;
+
   border-radius: 5px;
   text-align: center;
 }
@@ -65,10 +73,8 @@
 
 @include tablet-portrait-up() {
   .header {
-    font-size: 1.8rem;
     flex-wrap: nowrap;
   }
-
   .nav {
     width: 80%;
     padding: 0 40px;
@@ -76,15 +82,41 @@
   .logo {
     width: 80px;
   }
-
   .search {
     width: 30%;
     text-align: center;
   }
 }
 
+@include tablet() {
+  .header {
+    flex-wrap: wrap;
+  }
+};
+
 @include tablet-portrait-only() {
   .header {
     font-size: 1.4rem;
+  }
+};
+
+@include tablet-landscape-only() {
+  .header {
+    font-size: 1.6rem;
+  }
+};
+
+@include desktop-up() {
+  .header {
+    font-size: 1.8rem;
+  }
+};
+
+@include phone-only() {
+  .links {
+    font-size: 1rem;
+  }
+  .link {
+    text-align: center;
   }
 };

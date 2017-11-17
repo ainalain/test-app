@@ -18,7 +18,10 @@ const Loading = ({ ajaxCallInProgress, large }) => {
 };
 
 Loading.propTypes = {
-  ajaxCallInProgress: PropTypes.bool,
+  ajaxCallInProgress: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number
+  ]),
 };
 
 export default Loading;
