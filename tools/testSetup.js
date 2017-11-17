@@ -13,13 +13,14 @@ hook({
   preprocessCss: ( data, file ) => sass.renderSync({ file }).css
 });
 
-//add .svg right comprehension to mocha tests
+//add images extensions right comprehension to mocha tests
 const fs = require('fs');
-
-require.extensions['.svg'] = function (module, filename) {
-   module.exports = fs.readFileSync(filename, 'utf8');
-};
-
+const exts = ['.svg', '.gif', '.png'];
+exts.forEach(extension => {
+  require.extensions[extension] = (module, filename) => {
+    module.exports = fs.readFileSync(filename, 'utf8');
+  };
+});
 
 global.sinon = sinon;
 
@@ -32,4 +33,4 @@ const enzyme = require('enzyme');
 
 enzyme.configure({ adapter: new Adapter() });
 
-module.exports = enzyme;  
+module.exports = enzyme;

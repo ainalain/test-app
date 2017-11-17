@@ -2,11 +2,18 @@
 
 .loading {
   position: absolute;
-  top: 150px;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
 .hidden {
   display: none;
+}
+
+.small {
+  bottom: -60px;
+  left: 200px;
 }
 
 @include tablet-landscape-up() {
