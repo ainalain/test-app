@@ -21,10 +21,6 @@ describe('Card', () => {
     expect(component.find(`section.${styles.card}`).length).toBe(1);
   });
 
-  it('renders an img tag', () => {
-    expect(component.find('img').length).toBe(1);
-  });
-
   it('renders a button', () => {
     expect(component.find('button').length).toBe(1);
   });

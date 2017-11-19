@@ -7,7 +7,6 @@ import * as types from '../actionTypes';
 import comments from '../../api/comments';
 
 describe('Comments actions', () => {
-  //Test a sync action
   it('should create a GET_ALL_COMMENTS action', () => {
     const expectedAction = {
       type: types.GET_ALL_COMMENTS

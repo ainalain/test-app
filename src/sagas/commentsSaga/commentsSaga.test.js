@@ -117,7 +117,7 @@ describe('commentsSaga', () => {
       expect(actualYield).toEqual(expectedYield);
     });
 
-    it('should call api for product with provided id', () => {
+    it('should call api for adding a new comment', () => {
       const worker = addComment(comment);
       const actualYield = worker.next(comment).value;
 
@@ -204,9 +204,4 @@ describe('commentsSaga', () => {
       });
     });
   });
-
-
-
-
-
 });
