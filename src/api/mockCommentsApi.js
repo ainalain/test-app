@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import comments from './comments';
+import defaultComments from './comments';
 
 const delay = 1000;
 
@@ -41,6 +41,7 @@ const makeCommentProps = () => {
   };
 };
 
+let comments = defaultComments;
 
 // This file mocks a web API by working with the hard-coded data below.
 // It uses setTimeout to simulate the delay of an AJAX call.
@@ -62,16 +63,25 @@ export default class CommentsApi {
         }
         const props = makeCommentProps();
         const newComment = { ...props, text: text, rating };
-        const newComments = [...comments, newComment];
+        const newComments =[newComment, ...comments];
+        comments = newComments;
         return resolve(newComment);
       }, delay);
     });
   }
 
-  static clearComments() {
+  /*
+   * This is a fake action, provided in this test app
+   * for a user comfort
+   */
+  static clearDefaultComments() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        return resolve([]);
+        const index = comments.length - 4;
+        const newComments = comments.slice(0, index);
+        comments = newComments;
+
+        return resolve(comments);
       }, delay);
     });
   }

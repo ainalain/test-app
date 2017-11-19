@@ -11,7 +11,7 @@ describe('Comments reducer', () => {
 
   it('should populate state with loaded comments', () => {
     const action = {
-      type: types.LOAD_COMMENTS_SUCCESS,
+      type: types.GET_ALL_COMMENTS_SUCCESS,
       payload: [1, 2, 3, 4],
     };
 

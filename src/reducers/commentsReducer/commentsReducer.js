@@ -3,9 +3,10 @@ import { comments } from '../initialState';
 
 export default function commentsReducer(state = comments, { type, payload }) {
   switch (type) {
-    case types.LOAD_COMMENTS_SUCCESS:
+    case types.GET_ALL_COMMENTS_SUCCESS:
+    case types.CLEAR_DEFAULT_COMMENTS_SUCCESS:
        return [ ...payload ];
-    case types.LOAD_COMMENTS_FAILURE:
+    case types.GET_ALL_COMMENTS_FAILURE:
       return payload;
     case types.ADD_COMMENT_SUCCESS:
       return [ payload, ...state];
