@@ -75,6 +75,7 @@ module.exports = {
         options: {
           presets: ['es2015', 'stage-0', 'react'],
           plugins: [
+            'babel-plugin-transform-runtime',
             'babel-plugin-transform-class-properties',
             'babel-plugin-syntax-class-properties',
             'babel-plugin-transform-object-rest-spread',

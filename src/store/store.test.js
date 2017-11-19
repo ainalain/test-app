@@ -2,6 +2,7 @@ import expect from 'expect';
 import { createStore } from 'redux';
 import rootReducer from '../reducers';
 import * as actions from '../actions/commentActions/commentActions';
+import * as types from '../actions/actionTypes';
 import comments from '../api/comments';
 
 describe('Store', () => {
@@ -9,10 +10,13 @@ describe('Store', () => {
     const initialState = {
       isLoading: true,
       comments: [],
-    }
+    };
     const store = createStore(rootReducer, initialState);
 
-    const action = actions.loadCommentsSuccess(comments);
+    const action = {
+      type: types.GET_ALL_COMMENTS_SUCCESS,
+      payload: comments,
+    };
     store.dispatch(action);
 
     const actual = store.getState().comments[2]; //with shortest text
@@ -27,7 +31,7 @@ describe('Store', () => {
 
   it('should handle adding 1 new comment', () => {
     const initialState = {
-      comments: [...comments]
+      comments: [...comments],
     };
 
     const store = createStore(rootReducer, initialState);
@@ -37,7 +41,10 @@ describe('Store', () => {
       rating: 4,
     };
 
-    const addCommentAction = actions.addCommentSuccess(comment);
+    const addCommentAction = {
+      type: types.ADD_COMMENT_SUCCESS,
+      payload: comment,
+      };
     store.dispatch(addCommentAction);
 
     const newState = store.getState().comments[0].id;

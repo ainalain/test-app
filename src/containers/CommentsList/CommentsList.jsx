@@ -140,7 +140,7 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     getAllComments: commentActions.getAllComments,
     addComment: commentActions.addComment,
-    clearComments: commentActions.clearComments,
+    clearComments: commentActions.clearDefaultComments,
   }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentsList);

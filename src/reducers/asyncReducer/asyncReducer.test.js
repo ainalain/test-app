@@ -14,13 +14,11 @@ describe('Async reducer', () => {
 
   it('should update async state after ajax call has begun', () => {
     const action1 = {
-      type: types.BEGIN_AJAX_CALL,
-      payload: 'comments',
+      type: types.GET_ALL_COMMENTS,
     };
 
     const action2 = {
-      type: types.BEGIN_AJAX_CALL,
-      payload: 'product',
+      type: types.GET_PRODUCT,
     };
 
     const newState1 = reducer(initialState, action1);
@@ -36,7 +34,7 @@ describe('Async reducer', () => {
     };
 
     const action = {
-      type: types.LOAD_COMMENTS_SUCCESS,
+      type: types.GET_ALL_COMMENTS_SUCCESS,
     };
 
     const action1 = {

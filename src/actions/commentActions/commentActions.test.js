@@ -7,45 +7,25 @@ import * as types from '../actionTypes';
 import comments from '../../api/comments';
 
 describe('Comments actions', () => {
-  //Test a sync action
-  it('should create a LOAD_COMMENTS_SUCCESS action', () => {
+  it('should create a GET_ALL_COMMENTS action', () => {
     const expectedAction = {
-      type: types.LOAD_COMMENTS_SUCCESS,
-      payload: comments,
+      type: types.GET_ALL_COMMENTS
     };
 
-    const action = actions.loadCommentsSuccess(comments);
+    const action = actions.getAllComments();
     expect(action).toEqual(expectedAction);
   });
 
-  it('should create an ADD_COMMENT_SUCCESS action', () => {
-    const comment = { id: 'test', text: 'text' };
+  it('should create an ADD_COMMENT action', () => {
+    const text = 'some text';
+    const rating = 5;
     const expectedAction = {
-      type: types.ADD_COMMENT_SUCCESS,
-      payload: comment,
+      type: types.ADD_COMMENT,
+      payload: { text, rating },
     };
 
-    const action = actions.addCommentSuccess(comment);
+    const action = actions.addComment(text, rating);
 
     expect(action).toEqual(expectedAction);
-  });
-
-  //Test async actions
-  describe('Async comment actions', () => {
-    const mockStore = configureMockStore([thunk]);
-    it('should create BEGIN_AJAX_CALL and LOAD_COMMENTS_SUCCESS when loading comments', (done) => {
-      const expectedActions = [
-      { type: types.BEGIN_AJAX_CALL, payload: 'comments' },
-      { type: types.LOAD_COMMENTS_SUCCESS, payload: comments }
-      ];
-
-      const store = mockStore({ comments: [], expectedActions});
-      store.dispatch(actions.getAllComments()).then(() => {
-        const commentActions = store.getActions();
-        expect(commentActions[0].type).toEqual(types.BEGIN_AJAX_CALL);
-        expect(commentActions[1].type).toEqual(types.LOAD_COMMENTS_SUCCESS);
-        done();
-      });
-    });
   });
 });

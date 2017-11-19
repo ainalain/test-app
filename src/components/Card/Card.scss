@@ -6,7 +6,7 @@
 
   min-height: 200px;
 
-  padding: 10px 0;
+  padding: 20px 20px 0 20px;
 
   justify-content: space-between;
   align-items: center;
@@ -81,10 +81,6 @@
     flex-direction: row;
   }
 
-  .photo, .info {
-    width: 40%;
-  }
-
   .info {
     flex-wrap: wrap;
     padding-left: 5%;
@@ -113,7 +109,7 @@
 
 @include desktop-up {
   .card {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .button {
