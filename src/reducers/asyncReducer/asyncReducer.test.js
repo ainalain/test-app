@@ -1,4 +1,3 @@
-import expect from 'expect';
 import reducer from './asyncReducer';
 import * as types from '../../actions/actionTypes';
 

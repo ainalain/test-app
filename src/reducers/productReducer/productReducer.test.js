@@ -1,4 +1,3 @@
-import expect from 'expect';
 import reducer from './productReducer';
 import * as types from '../../actions/actionTypes';
 

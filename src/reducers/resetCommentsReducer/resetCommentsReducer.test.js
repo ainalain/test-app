@@ -1,4 +1,3 @@
-import expect from 'expect';
 import reducer from './resetCommentsReducer';
 import * as types from '../../actions/actionTypes';
 

@@ -1,7 +1,6 @@
-import expect from 'expect';
 import { createStore } from 'redux';
+
 import rootReducer from '../reducers';
-import * as actions from '../actions/commentActions/commentActions';
 import * as types from '../actions/actionTypes';
 import comments from '../api/comments';
 

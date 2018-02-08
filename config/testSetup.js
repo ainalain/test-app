@@ -1,11 +1,14 @@
 process.env.NODE_ENV = 'test';
 
-const sinon = require('sinon');
+import sinon from 'sinon';
+import expect from 'expect';
+import enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-require('babel-register')();
+import hook from 'css-modules-require-hook';
+import sass from 'node-sass';
 
-const hook = require('css-modules-require-hook');
-const sass = require('node-sass');
+enzyme.configure({ adapter: new Adapter() });
 
 hook({
   extensions: [ '.scss', '.css' ],
@@ -14,7 +17,7 @@ hook({
 });
 
 //add images extensions right comprehension to mocha tests
-const fs = require('fs');
+import fs from 'fs';
 const exts = ['.svg', '.gif', '.png'];
 exts.forEach(extension => {
   require.extensions[extension] = (module, filename) => {
@@ -23,14 +26,8 @@ exts.forEach(extension => {
 });
 
 global.sinon = sinon;
+global.expect = expect;
 
 global.navigator = {
-  userAgent: 'node.js'
+    userAgent: 'node.js'
 };
-
-const Adapter = require('enzyme-adapter-react-16');
-const enzyme = require('enzyme');
-
-enzyme.configure({ adapter: new Adapter() });
-
-module.exports = enzyme;

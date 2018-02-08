@@ -53,6 +53,7 @@ export class CommentsList extends React.Component {
         currentRating,
       },
     } = this;
+
     if (!currentComment.length) {
       this.setState({ error: EMPTY_TEXT_ERROR });
       return;

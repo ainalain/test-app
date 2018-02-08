@@ -1,10 +1,5 @@
-import expect from 'expect';
-import thunk from 'redux-thunk';
-import configureMockStore from 'redux-mock-store';
-
 import * as actions from './commentActions';
 import * as types from '../actionTypes';
-import comments from '../../api/comments';
 
 describe('Comments actions', () => {
   it('should create a GET_ALL_COMMENTS action', () => {

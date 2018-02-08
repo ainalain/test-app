@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import expect from 'expect';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { CommentsList } from './CommentsList';
@@ -13,6 +12,7 @@ const props = {
 
 const setup = () => shallow(<CommentsList {...props} />);
 
+/* eslint-disable no-undef */
 describe('CommentsList', () => {
   it('renders an h2 with provided text', () => {
     const component = setup();
@@ -23,7 +23,6 @@ describe('CommentsList', () => {
 
   it('renders CommentInput component', () => {
     const component = setup();
-
     expect(component.find('CommentInput').length).toBe(1);
   });
 
@@ -36,7 +35,7 @@ describe('CommentsList', () => {
   it('renders button element', () => {
     const component = setup();
 
-    expect(component.find('button').length).toBe(1);
+    expect(component.find('button').length).toBe(2);
   });
 
   it('calls componentWillMount method before page is rendered', () => {
